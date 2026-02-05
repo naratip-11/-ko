@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebAR Video Player</title>
+    <title>AR Video on GitHub</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
@@ -9,11 +9,11 @@
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       
       <a-assets>
-        <video id="webcamVideo" src="my-video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
+        <video id="arVideo" src="1.mp4" loop="true" crossorigin="anonymous" playsinline></video>
       </a-assets>
 
       <a-marker preset="hiro">
-        <a-video src="#webcamVideo" width="1.6" height="0.9" position="0 0 0" rotation="-90 0 0"></a-video>
+        <a-video src="#arVideo" width="1.6" height="0.9" position="0 0 0" rotation="-90 0 0"></a-video>
       </a-marker>
 
       <a-entity camera></a-entity>
@@ -21,7 +21,7 @@
 
     <script>
       window.addEventListener('click', function () {
-        var v = document.querySelector('#webcamVideo');
+        var v = document.querySelector('#arVideo');
         v.play();
       });
     </script>
